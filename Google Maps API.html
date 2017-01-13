@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<title>Title</title>
+</head>
+<body>
+Search your address <input id=address type="text" name=address placeholder="write address here">
+<button id="button" onclick="showMap()">Submit</button>
+<div id="map">
+    <!--API key = AIzaSyDrGBNXvqLvRASi5dGZMp_YtUTnZUqQ_QY-->
+    <!--<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ_cUHU5zEw0cRUkFUIc0HUY8&key=AIzaSyDrGBNXvqLvRASi5dGZMp_YtUTnZUqQ_QY" allowfullscreen></iframe>-->
+</div>
+
+<script>
+    function showMap() {
+        var address = document.getElementById("address").value;
+        var str = '<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=' + address + '&key=AIzaSyDrGBNXvqLvRASi5dGZMp_YtUTnZUqQ_QY" allowfullscreen></iframe>';
+        document.getElementById("map").innerHTML = str;
+    }
+</script>
+</body>
+</html>
